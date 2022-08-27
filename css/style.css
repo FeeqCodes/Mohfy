@@ -54,7 +54,7 @@ h3{
 p{
     margin: 0;
     margin-bottom: 3rem;
-    text-align: initial;
+    /* text-align: initial; */
     
     
 }
@@ -667,6 +667,7 @@ a{
 
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .block__heading{
@@ -878,3 +879,5 @@ a{
     
 
 }
+
+/* Testimonials Block */
