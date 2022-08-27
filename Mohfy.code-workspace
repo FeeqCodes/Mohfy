@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "Mohfy",
+		"path": "."
+	},
+	{
+		"name": "js",
+		"path": "..\\..\\Moshify\\Moshify\\code\\Moshify\\js"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Mohfy"
+  }
+}
