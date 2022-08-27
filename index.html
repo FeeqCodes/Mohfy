@@ -15,24 +15,68 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- snap sprite -->
+    <!-- sprite -->
 
     <svg display="none">
       <defs>
-        <g id="img-snap">
-          <g xmlns="http://www.w3.org/2000/svg" fill="rgb(0,0,0)">
-            <path
-              d="m460.646 10h-416.708c-18.714 0-33.938 15.521-33.938 34.6v420.122c0 19.078 15.224 34.6 33.89 34.6 3.139.025 315.346 2.492 438.5 2.679h.03a19.282 19.282 0 0 0 13.827-5.813 19.917 19.917 0 0 0 5.753-14.418l-7.421-437.793c-.33-18.735-15.553-33.977-33.933-33.977zm-416.708 12h416.708c11.879 0 21.719 9.954 21.935 22.184l6.511 384.244-96.777-99.462a33.563 33.563 0 0 0 -54.35-3.721l-45.03 53.805a21.4 21.4 0 0 1 -18.452 7.764 21.636 21.636 0 0 1 -17.013-10.959l-81.253-140.576a33.583 33.583 0 0 0 -56.1-3.578l-98.117 113.313v-300.414c0-12.462 9.841-22.6 21.938-22.6zm443.767 465.764a7.377 7.377 0 0 1 -5.282 2.236h-.011c-123.12-.187-435.288-2.654-438.474-2.679-12.1 0-21.938-10.138-21.938-22.6v-101.375l107.321-123.946.271-.337a21.585 21.585 0 0 1 36.236 2.221l81.252 140.576a33.576 33.576 0 0 0 55.057 4.892l45.03-53.805a21.57 21.57 0 0 1 35.25 2.83l.356.591 106.615 109.572.612 36.028a8.007 8.007 0 0 1 -2.295 5.796z"
-            />
-            <path
-              d="m284.988 218.5c29.7 0 53.864-24.671 53.864-54.995s-24.164-54.995-53.864-54.995-53.863 24.671-53.863 54.995 24.163 54.995 53.863 54.995zm0-97.99c23.084 0 41.864 19.287 41.864 42.995s-18.78 43-41.864 43-41.863-19.288-41.863-42.995 18.775-42.996 41.863-42.996z"
-            />
-          </g>
+        <g id="img-menu">
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="m21.5 24h-19c-1.379 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.121-2.5 2.5-2.5h19c1.379 0 2.5 1.122 2.5 2.5v19c0 1.378-1.121 2.5-2.5 2.5zm-19-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z"
+          />
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="m16.5 8h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"
+          />
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="m16.5 12.5h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"
+          />
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="m16.5 17h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"
+          />
+        </g>
+      </defs>
+    </svg>
+    <!-- chevron svg -->
+    <svg display="none">
+      <defs>
+        <g id="img-chevron">
+          <circle
+            xmlns="http://www.w3.org/2000/svg"
+            cx="25.5"
+            cy="25.5"
+            r="25.5"
+            fill="#393939"
+          />
+          <rect
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.6"
+            height="15.24"
+            x="24.4"
+            y="27.9"
+            fill="#fff"
+            rx=".8"
+            transform="rotate(-39 11.114 37.674)"
+          />
+          <rect
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.6"
+            height="15.24"
+            x="33.3"
+            y="27.9"
+            fill="#fff"
+            rx=".8"
+            transform="rotate(37.3 44.444 24.605)"
+          />
         </g>
       </defs>
     </svg>
 
-    <!-- end here -->
+    <!-- svg ends -->
+    <!-- chevron svg end -->
+    <!-- sprite end -->
 
     <nav class="nav collapsible">
       <a href="/"
@@ -41,9 +85,19 @@
           alt=""
           width="90px"
       /></a>
-      <svg class="icon icon--white nav__togler">
-        <use xlink:href="images/sprite.svg#menu"></use>
+
+      <svg
+        class="icon icon--white nav__togler"
+        width="512"
+        height="512"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        preserveAspectRatio="xMinYMin"
+      >
+        <use xlink:href="#img-menu"></use>
       </svg>
+
       <ul class="list nav__list collapsible__content">
         <li class="nav__item"><a href="#">Hosting</a></li>
         <li class="nav__item"><a href="#">VPS</a></li>
@@ -51,52 +105,91 @@
         <li class="nav__item"><a href="#">Pricing</a></li>
       </ul>
     </nav>
-      <section class="block">
-        <header class="block__header">
-          <h2>What our Customers are saying</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officia.</p>
-        </header>
-        <div class="container">
-          <div class="card testimonial">
-            <div class="grid grid--cols-2">
-              <div class="testimonial__image">
-                <img
-                  src="./images/testimonial.jpg"
-                  alt="a hapy smiling customer"
-                />
-                <span class="icon-container icon-container--accent">
-                  <svg class="icon icon--white icon--small icon--primary">
-                    <use xlink:href="images/sprite.svg#computer"></use>
-                  </svg>
-                </span>
-              </div>
-              <div>
-                <blockquote class="quote">
-                  <p class="quote__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt eaque magni tenetur ex, vero corrupti ducimus fugit cumque commodi earum.
-                  </p>
-                  <footer class="">
-                    <div class="media">
-                      <div class="media__image">
-                        <svg class="icon icon--primary quote__line">
-                          <use xlink:href="images/sprite.svg#line"></use>
-                        </svg>
-                      </div>
-              
-                      <div class="media__body">
-                        <h3 class="media__title quote__author">John Smith</h3>
-                        <p class="quote__organisation">ABC Company</p>
-                     </div>
-                    </div>
-                    
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
+
+    <!-- footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Item 1</h2>
+            <svg
+              class="icon icon--white collapsible__chevron"
+              width="51"
+              height="51"
+              viewBox="0 0 51 51"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+            >
+              <use xlink:href="#img-chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Website Hosting</a></li>
+              <li><a href="#">Free Automated Wordpress</a></li>
+              <li><a href="#">Migrations</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
           </div>
-        </div>
-      </section>
-   
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Item 2</h2>
+            <svg
+              class="icon icon--white collapsible__chevron"
+              width="51"
+              height="51"
+              viewBox="0 0 51 51"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+            >
+              <use xlink:href="#img-chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Hosting</a></li>
+              <li><a href="#">VPS</a></li>
+              <li><a href="#">Domain</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Item 3</h2>
+            <svg
+              class="icon icon--white collapsible__chevron"
+              width="51"
+              height="51"
+              viewBox="0 0 51 51"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+            >
+              <use xlink:href="#img-chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Hosting</a></li>
+              <li><a href="#">VPS</a></li>
+              <li><a href="#">Domain</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__brand">
+          <img src="images/logo.svg" alt="" />
+          <p class="footer__copyright">Copyright 2020 Mansa</p>
+        </section>
+      </div>
+    </footer>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
